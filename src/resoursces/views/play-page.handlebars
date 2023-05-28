@@ -1,0 +1,107 @@
+<!-- Play Movies Container -->
+    <div class="play-container container">
+        <!-- Play Image -->
+        <img src="./image/play-page/play-background.jpg" alt="" class="play-img">
+        <!-- Play Text -->
+        <div class="play-text">
+            <h2>Venom 2</h2>
+            <!-- Ratings -->
+            <div class="rating">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star-half' ></i>
+            </div>
+            <!-- Tags -->
+            <div class="tags">
+                <span>Action</span>
+                <span>Sci-fi</span>
+                <span>4K</span>
+            </div>
+            <!-- Trailer Button -->
+            <a href="" class="watch-btn">
+                <i class='bx bxs-right-arrow'></i>
+                <span>Watch the trailer</span>
+            </a>
+        </div>
+        <!-- Play Btn -->
+        <i class='bx bxs-right-arrow play-movie'></i>
+        <!-- Video Container -->
+        <div class="video-container">
+            <!-- Video-box -->
+            <div class="video-box">
+                <video id="myvideo" src="./image/play-page/y2meta.com - VENOM_ LET THERE BE CARNAGE - Official Trailer 2 (HD)(720p).mp4" controls></video>
+                <!-- Close Video Icon -->
+                <i class='bx bx-x close-video'></i>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div class="about-movie container">
+        <h2>Venom: Let There Be Carnage</h2>
+        <p>Venom was intended by Sony to be the start of a new shared universe, and plans for a sequel began during production on the first film. Harrelson was cast to make a brief appearance as Kasady at the end of Venom, with the intention of him becoming the villain Carnage in the sequel.</p>
+        <!-- Movie Cast -->
+        <h2 class="cast-heading">Movie Cast</h2>
+        <div class="cast">
+            <!-- Cast 1 -->
+            <div class="cast-box">
+                <img src="./image/play-page/1.jpg" alt="" class="cast-img">
+                <span class="cast-title">Tom Hardy</span>
+            </div>
+            <!-- Cast 2 -->
+            <div class="cast-box">
+                <img src="./image/play-page/2.jpg" alt="" class="cast-img">
+                <span class="cast-title">Woody Harrelson</span>
+            </div>
+            <!-- Cast 3 -->
+            <div class="cast-box">
+                <img src="./image/play-page/3.jpg" alt="" class="cast-img">
+                <span class="cast-title">Amber Sienna</span>
+            </div>
+            <!-- Cast 4 -->
+            <div class="cast-box">
+                <img src="./image/play-page/4.jpg" alt="" class="cast-img">
+                <span class="cast-title">Michelle Williams</span>
+            </div>
+            <!-- Cast 5 -->
+            <div class="cast-box">
+                <img src="./image/play-page/5.jpg" alt="" class="cast-img">
+                <span class="cast-title">Stephen Graham</span>
+            </div>
+            <!-- Cast 6 -->
+            <div class="cast-box">
+                <img src="./image/play-page/6.jpg" alt="" class="cast-img">
+                <span class="cast-title">David Zepeda</span>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Download -->
+    <div class="download">
+        <h2 class="download-title">Download Movie</h2>
+        <div class="download-links">
+            <a href="./image/play-page/y2meta.com - VENOM_ LET THERE BE CARNAGE - Official Trailer 2 (HD)(720p).mp4" download>480p</a>
+            <a href="./image/play-page/y2meta.com - VENOM_ LET THERE BE CARNAGE - Official Trailer 2 (HD)(720p).mp4" download>720p</a>
+            <a href="./image/play-page/y2meta.com - VENOM_ LET THERE BE CARNAGE - Official Trailer 2 (HD)(720p).mp4" download>1080p</a>
+
+        </div>
+    </div>
+    <script>
+        let playButton = document.querySelector('.play-movie');
+        let video = document.querySelector('.video-container');
+        let myvideo = document.querySelector('#myvideo');
+        let closeBtn = document.querySelector('.close-video');
+        playButton.onclick = () => {
+            video.classList.add("show-video");
+
+            myvideo.play();
+    
+        }
+        closeBtn.onclick = () => {
+            video.classList.remove("show-video");
+
+            myvideo.pause();
+    
+        }
+    </script>

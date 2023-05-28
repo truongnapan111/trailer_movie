@@ -1,0 +1,44 @@
+<!-- Home -->
+    <section id="home" class="home container">
+        <!-- Home img -->
+        <img src="../../public/image/home1.jpg" alt="" class="home-img">
+        <!-- Home text -->
+        <div class="home-text">
+            <h1 class="home-title">Venom 2 <br>Andy Serkis</h1>
+            <p>Releasing 1 October </p>
+            <a href="/films/venom" class="watch-btn">
+                <i class='bx bxs-right-arrow'></i>
+                <span>Watch the trailer</span>
+            </a>
+        </div>
+    </section>
+    <!-- Home End -->
+
+    <!-- Movies Section -->
+    <section class="movies container" id="movies">
+        <div class="heading">
+            <h2 class="heading-title">Movies And Shows</h2>
+        </div>
+        <!-- Movies Content -->
+        <div class="movies-content">
+
+            {{#each films}}
+            <!-- Movies Box 1 -->
+            <div class="movie-box">
+                <img src="{{this.image}}" alt="{{this.name}}" class="movie-box-img">
+                <div class="box-text">
+                    <h2 class="movie-title">{{this.name}}</h2>
+                    <span class="movie-type">{{this.category}}</span>
+                    <a href="/films/{{this.slug}}" class="watch-btn play-btn">
+                        <i class='bx bxs-right-arrow'></i>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+    <!-- Movies Section End -->
+    <!-- Next Page -->
+    <div class="next-page">
+        <a href="#" class="next-btn">Next Page</a>
+    </div>

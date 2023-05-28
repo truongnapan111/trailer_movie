@@ -1,0 +1,30 @@
+
+<div class="wrapper-create">
+    <h3>Create Film</h3>
+
+    <form method="POST" action="/films/store">
+        <div class="form-create">
+            <label for="name">Name</label>
+            <input type="text" class="create-input" id="name" name="name">
+        </div>
+        <div class="form-create">
+            <label for="category">Category</label>
+            <input type="text" class="create-input" id="category" name="category">
+        </div>
+        {{!-- <div class="form-create">
+            <label for="image">Image</label>
+            <input type="text" class="create-input" id="image" name="image">
+        </div> --}}
+        {{!-- <div class="form-create">
+            <label for="slug">Slug</label>
+            <input type="text" class="create-input" id="slug" name="slug">
+        </div> --}}
+        <div class="form-create">
+            <label for="video">Video</label>
+            <input type="text" class="create-input" id="videoId" name="videoId">
+        </div>
+        
+        <button type="submit" class="create-submit">Submit</button>
+        
+    </form>
+</div>

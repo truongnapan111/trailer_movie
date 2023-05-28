@@ -1,0 +1,72 @@
+<!-- Play Movies Container -->
+    <div class="play-container container">
+        <iframe width="1180" height="550" src="https://www.youtube.com/embed/{{film.videoId}}"></iframe>
+    </div>
+    <!-- About -->
+    <div class="about-movie container">
+        <h2>{{film.name}}</h2>
+        <p>Was intended by Sony to be the start of a new shared universe, and plans for a sequel began during production on the first film. Harrelson was cast to make a brief appearance as Kasady at the end of Venom, with the intention of him becoming the villain Carnage in the sequel.</p>
+        <!-- Movie Cast -->
+        <h2 class="cast-heading">Movie Cast</h2>
+        <div class="cast">
+            <!-- Cast 1 -->
+            <div class="cast-box">
+                <img src="../../public/image/play-page/1.jpg" alt="" class="cast-img">
+                <span class="cast-title">Tom Hardy</span>
+            </div>
+            <!-- Cast 2 -->
+            <div class="cast-box">
+                <img src="../../public/image/play-page/2.jpg" alt="" class="cast-img">
+                <span class="cast-title">Woody Harrelson</span>
+            </div>
+            <!-- Cast 3 -->
+            <div class="cast-box">
+                <img src="../../public/image/play-page/3.jpg" alt="" class="cast-img">
+                <span class="cast-title">Amber Sienna</span>
+            </div>
+            <!-- Cast 4 -->
+            <div class="cast-box">
+                <img src="../../public/image/play-page/4.jpg" alt="" class="cast-img">
+                <span class="cast-title">Michelle Williams</span>
+            </div>
+            <!-- Cast 5 -->
+            <div class="cast-box">
+                <img src="../../public/image/play-page/5.jpg" alt="" class="cast-img">
+                <span class="cast-title">Stephen Graham</span>
+            </div>
+            <!-- Cast 6 -->
+            <div class="cast-box">
+                <img src="../../public/image/play-page/6.jpg" alt="" class="cast-img">
+                <span class="cast-title">David Zepeda</span>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Download -->
+    <div class="download">
+        <h2 class="download-title">Download Movie</h2>
+        <div class="download-links">
+            <a href="" download>480p</a>
+            <a href="" download>720p</a>
+            <a href="" download>1080p</a>
+
+        </div>
+    </div>
+    <script>
+        let playButton = document.querySelector('.play-movie');
+        let video = document.querySelector('.video-container');
+        let myvideo = document.querySelector('#myvideo');
+        let closeBtn = document.querySelector('.close-video');
+        playButton.onclick = () => {
+            video.classList.add("show-video");
+
+            myvideo.play();
+    
+        }
+        closeBtn.onclick = () => {
+            video.classList.remove("show-video");
+
+            myvideo.pause();
+    
+        }
+    </script>

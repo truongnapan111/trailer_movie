@@ -1,0 +1,52 @@
+<header>
+        <!-- NAV -->
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="/" class="logo">
+                Phoim<span>Phim</span>
+            </a>
+            <!-- Search Box -->
+            <div class="search-box">
+                <input type="search" id="search-input" placeholder="Search movie">
+                <i class='bx bx-search'></i>
+            </div>
+            <!-- User -->
+            
+            {{!-- <a href="/films/create" class="create-film">
+            Create Film
+            </a> --}}
+            <div class="dropdown">
+                <a href="login" class="user">
+                    <img src="../../public/image/user.jpg" alt="" class="user-img">
+                </a>
+                {{!-- <button class="dropbtn">Function</button> --}}
+                <div class="dropdown-content">
+                    <a href="/films/create">Create Film</a>
+                    <a href="/me/stored/films">Film Store</a>
+                </div>
+            </div>
+            <!-- NAV Bar -->
+            <div class="navbar">
+                <a href="" class="nav-link nav-avtive">
+                    <i class='bx bx-home'></i>
+                    <span class="nav-link-title">Home</span>
+                </a>
+                <a href="#popular" class="nav-link">
+                    <i class='bx bx-trending-up' ></i>
+                    <span class="nav-link-title">Trending</span>
+                </a>
+                <a href="#movies" class="nav-link">
+                    <i class='bx bx-compass'></i>
+                    <span class="nav-link-title">Explore</span>
+                </a>
+                <a href="venom-2" class="nav-link">
+                    <i class='bx bx-movie-play' ></i>
+                    <span class="nav-link-title">Movies</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class='bx bx-heart' ></i>
+                    <span class="nav-link-title">Favourite</span>
+                </a>
+            </div>
+        </div>
+    </header>

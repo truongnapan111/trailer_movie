@@ -1,0 +1,28 @@
+<table id="customers">
+    <h1>A Fancy Table</h1>
+    <tr>
+        <th>#</th>
+        <th>Movie's Name</th>
+        <th>Category</th>
+        <th>Creation Time</th>
+        <th></th>
+    </tr>
+        {{#each films}}
+    <tr>
+        <th scope="row">{{@index}}</th>
+        <td>{{this.name}}</td>
+        <td>{{this.category}}</td>
+        <td>{{this.createdAt}}</td>
+        <td id="ok">
+            <a href="/films/{{this._id}}/edit" class="edit-form">Edit</a>
+        </td>
+    </tr>
+        {{/each}}
+ 
+</table>
+<style>
+.edit-form{
+    color: #ff0000;
+}    
+</style>
+
