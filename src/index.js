@@ -1,6 +1,6 @@
 const path = require('path');
 const morgan = require('morgan');
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
 const express = require('express');
 const hbs = require('express-handlebars');
 const app = express();
@@ -13,11 +13,11 @@ db.connect();
 
 app.use(morgan('combined'));
 // app.use(express.static(path.join(__dirname, '/public')));
-app.use('/public', express.static(path.join(__dirname+ '/public')))
+app.use('/public', express.static(path.join(__dirname + '/public')));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method'));
 
 app.engine('handlebars', hbs.engine());
 

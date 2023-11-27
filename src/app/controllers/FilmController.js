@@ -26,21 +26,23 @@ class FilmController {
     }
     //GET /films/:id/edit
     edit(req, res, next) {
-        Film.findById(req.params.id)
-            .then(film => res.render('films/edit', {
-                film: mongooseToObject(film)
-            }))
+        Film.findById(req.params.id).then((film) =>
+            res.render('films/edit', {
+                film: mongooseToObject(film),
+            }),
+        );
+    }
+    //UPDATE /films/:id
+    update(req, res, next) {
+        Film.updateOne({ _id: req.params.id }, req.body)
+            .then(() => res.redirect('/me/stored/films'))
+            .catch(next);
     }
     //DELETE /films/:id
-    update(req,res,next){
-        Film.updateOne({_id: req.params.id}, req.body)
-            .then(() => res.redirect('/me/stored/films'))
+    delete(req,res,next){
+        Film.deleteOne({_id: req.params.id})
+            .then(() => res.redirect('back'))
             .catch(next)
     }
-    // delete(req,res,next){
-    //     Film.deleteOne({_id: req.params.id})
-    //         .then(() => res.redirect('back'))
-    //         .catch(next)
-    // }
 }
 module.exports = new FilmController();

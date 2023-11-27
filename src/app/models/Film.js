@@ -7,7 +7,7 @@ const Schema = mongoose.Schema;
 
 const Film = new Schema(
     {
-        name: { type: String, unique: true},
+        name: { type: String, unique: true },
         category: { type: String },
         image: { type: String },
         slug: { type: String, slug: 'name' },
