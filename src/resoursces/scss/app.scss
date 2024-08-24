@@ -202,6 +202,7 @@ header {
 .watch-btn span {
     font-size: 1rem;
     font-weight: 400;
+    
 }
 /* Heading */
 .heading {
@@ -738,10 +739,9 @@ form .btn input[type='submit'] {
 .dropdown {
     position: relative;
     display: inline-block;
-
 }
 
-.dropdown-button{
+.dropdown-button {
     margin-left: 20px;
     border-radius: 40px;
 }
@@ -772,7 +772,7 @@ form .btn input[type='submit'] {
 // STORED_FILM
 #customers {
     margin-top: 10px;
-    
+
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;

@@ -39,10 +39,10 @@ class FilmController {
             .catch(next);
     }
     //DELETE /films/:id
-    delete(req,res,next){
-        Film.deleteOne({_id: req.params.id})
+    delete(req, res, next) {
+        Film.deleteOne({ _id: req.params.id })
             .then(() => res.redirect('back'))
-            .catch(next)
+            .catch(next);
     }
 }
 module.exports = new FilmController();
