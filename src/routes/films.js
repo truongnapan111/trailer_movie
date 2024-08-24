@@ -10,4 +10,6 @@ router.put('/:id', filmsController.update);
 router.delete('/:id/', filmsController.delete);
 router.get('/:slug', filmsController.show);
 
+
 module.exports = router;
+
